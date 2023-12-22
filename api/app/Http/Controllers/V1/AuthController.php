@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers\V1;
 
+use App\Http\Controllers\Controller;
 use App\Http\Requests\LoginUserRequest;
-use App\Http\Requests\StoreUserRequest;
+use App\Http\Requests\UserRequest;
 use App\Http\Resources\UserResource;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
@@ -30,10 +31,10 @@ class AuthController extends Controller
     }
 
     /**
-     * @param StoreUserRequest $request
+     * @param UserRequest $request
      * @return UserResource
      */
-    public function register(StoreUserRequest $request): UserResource
+    public function register(UserRequest $request): UserResource
     {
         $request->validated($request->all());
         $data = User::create([
@@ -56,6 +57,6 @@ class AuthController extends Controller
 
         return response()->json([
             'message' => 'Token deleted'
-        ], 200);
+        ], 201);
     }
 }

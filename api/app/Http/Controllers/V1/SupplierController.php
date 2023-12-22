@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers\V1;
 
+use App\Http\Controllers\Controller;
 use App\Http\Resources\SupplierResource;
 use App\Models\Supplier;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
+
 class SupplierController extends Controller
 {
     /**
@@ -47,4 +49,6 @@ class SupplierController extends Controller
     {
         //
     }
+
+
 }

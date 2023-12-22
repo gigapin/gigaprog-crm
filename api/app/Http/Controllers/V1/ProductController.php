@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\V1;
 
+use App\Http\Controllers\Controller;
 use App\Actions\PriceAction;
 use App\Http\Requests\ProductRequest;
 use App\Http\Resources\ProductResource;

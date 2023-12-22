@@ -23,14 +23,6 @@ return new class extends Migration
             $table->rememberToken();
             $table->timestamps();
 
-            \Illuminate\Support\Facades\DB::table('users')->insert([
-                'id' => 1,
-                'name' => 'admin',
-                'firstname' => 'Admin',
-                'lastname' => 'Admin',
-                'email' => 'admin@admin.com',
-                'password' => Hash::make('password')
-            ]);
         });
     }
 
